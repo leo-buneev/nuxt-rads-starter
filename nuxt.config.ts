@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   ssr: false,
   srcDir: 'src/',
   serverDir: 'server/',
-  devServer: { port: 3010 },
+  devServer: { port: 3000 },
   modules: [injectVersion, '@nuxtjs/tailwindcss', '@primevue/nuxt-module', '@nuxt/icon'],
   icon: {
     provider: 'server',

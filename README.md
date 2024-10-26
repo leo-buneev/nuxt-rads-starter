@@ -1,5 +1,7 @@
 # Nuxt Rads starter
 
+Usage: `npx nuxi my-project -t gh:leo-buneev/nuxt-rads-starter`
+
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
