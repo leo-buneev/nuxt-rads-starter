@@ -1,0 +1,32 @@
+{
+  "name": "nuxt-rads-starter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/icon": "^1.5.8",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@primevue/nuxt-module": "^4.1.1",
+    "@primevue/themes": "^4.1.1",
+    "lodash": "^4.17.21",
+    "nuxt": "^3.13.2",
+    "tailwindcss-primeui": "^0.3.4",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "packageManager": "pnpm@9.12.1+sha512.e5a7e52a4183a02d5931057f7a0dbff9d5e9ce3161e33fa68ae392125b79282a8a8a470a51dfc8a0ed86221442eb2fb57019b0990ed24fab519bf0e1bc5ccfc4",
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.8.0",
+    "@types/lodash": "^4.17.12",
+    "eslint-plugin-format": "^0.1.2",
+    "prettier": "^3.3.3",
+    "sass-embedded": "^1.80.4",
+    "typescript": "^5.6.3"
+  }
+}

@@ -1,0 +1,54 @@
+variables:
+  # Persist node_modules between builds. Much faster,
+  # because deleting and recreating node_modules takes several minutes.
+   GIT_CLEAN_FLAGS: none
+
+default:
+   before_script:
+     - export NODE_OPTIONS='--max-old-space-size=5120'
+     # - nvm alias default node # for android  builds - makes sure nvm uses latest available node version
+     - corepack enable
+     - pnpm install --frozen-lockfile
+     - pnpm -v
+   tags:
+     - linux
+
+# lint:
+#   stage: test
+#   script:
+#     - pnpm generate-mr-title
+#     - pnpm lint-changed
+#   only:
+#     refs:
+#        - merge_requests
+
+
+# Helper methods for android machine:
+# - echo $JAVA_HOME
+# - ls /usr/lib/jvm/
+# - sudo apt update
+# - sudo apt search openjdk
+# - sudo apt-cache search openjdk
+# - sudo apt-get install openjdk-17-jdk -y
+# - ls /usr/lib/jvm/
+
+build-test:
+  stage: build
+  environment:
+    name: inscan-viewer
+    url: https://inscan-viewer.tirecheck.com/
+  script:
+    - pnpm build # build the app
+    - pnpm run deploy test
+
+# build-prod:
+#   stage: build
+#   environment:
+#     name: infleet-bi
+#     url: https://infleet-bi.tirecheck.com/
+#   script:
+#     - pnpm build # build the app
+#     - pnpm run deploy prod
+#   only:
+#     refs:
+#       - main
